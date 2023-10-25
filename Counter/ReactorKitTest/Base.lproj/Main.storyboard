@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReactorKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ1-Ld-Pa2">
+                                <rect key="frame" x="184.33333333333334" y="402" width="24.333333333333343" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVR-ZG-B72">
+                                <rect key="frame" x="321" y="408.66666666666669" width="32" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="-"/>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="NKC-fj-np2">
+                                <rect key="frame" x="186.66666666666666" y="490" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zId-xt-oRn">
+                                <rect key="frame" x="40" y="408.66666666666669" width="35" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zId-xt-oRn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="8Rt-uA-hLC"/>
+                            <constraint firstItem="NZ1-Ld-Pa2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C5i-Ce-5oP"/>
+                            <constraint firstItem="zId-xt-oRn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GCE-fD-LEU"/>
+                            <constraint firstItem="NZ1-Ld-Pa2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xs6-hx-j7O"/>
+                            <constraint firstItem="ZVR-ZG-B72" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ara-Bh-g9D"/>
+                            <constraint firstItem="NKC-fj-np2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c4H-BX-XIx"/>
+                            <constraint firstItem="NKC-fj-np2" firstAttribute="top" secondItem="NZ1-Ld-Pa2" secondAttribute="bottom" constant="40" id="dhB-y8-xpS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZVR-ZG-B72" secondAttribute="trailing" constant="40" id="zOR-aY-cNm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indicatorView" destination="NKC-fj-np2" id="GLK-5Z-RqH"/>
+                        <outlet property="minusButton" destination="ZVR-ZG-B72" id="Ztk-ef-3Xk"/>
+                        <outlet property="plusButton" destination="zId-xt-oRn" id="9d4-Gd-hQf"/>
+                        <outlet property="valueLabel" destination="NZ1-Ld-Pa2" id="iMZ-Dg-LUs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
