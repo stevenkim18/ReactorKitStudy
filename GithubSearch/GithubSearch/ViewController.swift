@@ -41,6 +41,7 @@ class GithubSearchViewController: UIViewController, View {
     func bind(reactor: GithubSearchReactor) {
         // Action
         searchController.searchBar.rx.text
+            .throttle(.microseconds(500), scheduler: MainScheduler.instance)
             .map { Reactor.Action.updateQuery($0) }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
