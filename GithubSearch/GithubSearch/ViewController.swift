@@ -46,6 +46,16 @@ class GithubSearchViewController: UIViewController, View {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
+        tableview.rx.contentOffset
+            .filter { [weak self] offset in
+                guard let self = self else { return false }
+                guard self.tableview.frame.height > 0 else { return false }
+                return offset.y + self.tableview.frame.height >= self.tableview.contentSize.height - 100
+            }
+            .map { _ in Reactor.Action.loadNextPage }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
         // State
         reactor.state
             .map { $0.repos }
